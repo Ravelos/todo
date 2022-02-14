@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="tarefa" [class.concluida]="tarefa.concluida">
+    {{tarefa.descricao}}
+  </div>
+  <button *ngIf="!tarefa.concluida" (click)="atualizar(tarefa.id)" type="button" class="icon">
+    <i class="far fa-square"></i>
+  </button>
+  <button *ngIf="tarefa.concluida" type="button" class="icon">
+    <i class="fas fa-check-square" (click)="atualizar(tarefa.id)"></i>
+  </button>
+</div>
