@@ -18,7 +18,7 @@ ngOnInit(): void {
 
 public adicionar(event?:any): void {
 
-  if(Boolean(this.descricaoNovaTarefa)&& !event || (event?.key === 'Enter') ){
+  if(Boolean(this.descricaoNovaTarefa)&& !event || (event?.key === 'Enter')){
 
     this.svc.adicionar(this.descricaoNovaTarefa);
     this.descricaoNovaTarefa = ''; // limpar valor após o cadastros

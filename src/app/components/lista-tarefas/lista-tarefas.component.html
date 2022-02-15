@@ -1,16 +1,19 @@
 <div class="wrapper">
   <h1>Lista de Atividades!</h1>
-  <button type="button" id="clean">Clean list</button>
+  <button type="button" id="clean" (click)="svc.cleanList()">Clean list</button>
   <div class="action-box">
+    <p><b>Tem {{svc.taskCounter}} atividades por fazer </b></p>
     <input
     type="text"
     placeholder="Adicionar nova tarefa"
     [(ngModel)]="descricaoNovaTarefa"
     (keyup)="adicionar($event)"
   />
+
   <button type="button" (click)="adicionar()">
     <i class="fas fa-plus"></i>
   </button>
+
   </div>
   <div class="list">
     <app-tarefa
