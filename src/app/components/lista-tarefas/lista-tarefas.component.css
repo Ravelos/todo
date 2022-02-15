@@ -46,3 +46,8 @@
 .action-box .msg{
   font-size: 17px;
 }
+#clean{
+  color: #9b60e9;
+  background-color: black;
+  border-radius: 25px;
+}
