@@ -5,6 +5,7 @@
     type="text"
     placeholder="Adicionar nova tarefa"
     [(ngModel)]="descricaoNovaTarefa"
+    (keyup)="adicionar($event)"
   />
   <button type="button" (click)="adicionar()">
     <i class="fas fa-plus"></i>

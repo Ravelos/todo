@@ -16,9 +16,15 @@ constructor(public svc: ListaTarefasService) { }
 ngOnInit(): void {
   }
 
-public adicionar(): void {
+public adicionar(event?:any): void {
+
+  if(Boolean(this.descricaoNovaTarefa)&& !event || (event?.key === 'Enter') ){
+
     this.svc.adicionar(this.descricaoNovaTarefa);
     this.descricaoNovaTarefa = ''; // limpar valor após o cadastros
+
+  }
+
 
   }
 
